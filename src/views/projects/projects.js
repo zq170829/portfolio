@@ -5,7 +5,7 @@ import {
   UrlButton,
   ImageEvent,
   createTheme,
-  themes
+  themes,
 } from "@merc/react-timeline";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
@@ -15,35 +15,34 @@ import Image from "react-bootstrap/Image";
 import "./project.css";
 
 //Projects
-import ChatKharaMeal from "../../assets/img/projects/ChatKharaMeal-Website.png";
-import ExpenseTracker from "../../assets/img/projects/Expense-TrackerApp.png";
-import MusicList from "../../assets/img/projects/Music-List-App.png";
-import QuizApp from "../../assets/img/projects/QuizzApp-JavaScript.png";
+import PetAdopt from "../../assets/img/projects/PetAdopt.png";
+import EVFY from "../../assets/img/projects/EVFY.png";
+import TotoList from "../../assets/img/projects/Todolist.png";
+
 
 //Skills
 import L_HTML5 from "../../assets/img/skills/html-5.svg";
 import L_CSS3 from "../../assets/img/skills/css3.svg";
 import L_BOOTSTRAP from "../../assets/img/skills/bootstrap-4.svg";
 import L_REACT from "../../assets/img/skills/react.svg";
-import L_MATERIALUI from "../../assets/img/skills/material-ui-1.svg";
 import L_REACT_BOOTSTRAP from "../../assets/img/skills/react-bootstrap.svg";
 import L_JAVASCRIPT from "../../assets/img/skills/javascript.svg";
-import L_FIREBASE from "../../assets/img/skills/firebase-icon.svg";
+import L_MONGODB from "../../assets/img/skills/mongodb.svg";
 
 // Custom timline theme
 const customTheme = createTheme(themes.default, {
   card: {
-    backgroundColor: "#efefef"
+    backgroundColor: "#efefef",
   },
   date: {
-    backgroundColor: "#ec4b4f"
+    backgroundColor: "#ec4b4f",
   },
   marker: {
-    borderColor: "#070d59"
+    borderColor: "#070d59",
   },
   timelineTrack: {
-    backgroundColor: "#ec4b4f"
-  }
+    backgroundColor: "#ec4b4f",
+  },
 });
 
 const ProjectTimeline = () => {
@@ -52,13 +51,13 @@ const ProjectTimeline = () => {
       <h1 className="pt-3 text-center font-details-b pb-3">PROJECTS</h1>
       <Timeline theme={customTheme}>
         <Events>
-          {/* //ChatKharaMeal */}
+          {/* //Animal Adoption Website */}
           <ImageEvent
-            date="30th Oct, 2021"
+            date="30th September, 2021"
             className="text-center"
-            text="ChatKhara Meal"
-            src={ChatKharaMeal}
-            alt="Chatkhara meal"
+            text="PetAdopt"
+            src={PetAdopt}
+            alt="PetAdopt"
           >
             <div className="d-flex justify-content-between flex-column mt-1">
               <div>
@@ -74,17 +73,17 @@ const ProjectTimeline = () => {
 
                     <Accordion.Collapse eventKey="0" className="text-left">
                       <Card.Body>
-                        <strong>Description:</strong> This is an E-Commerce
-                        website of savoury foods, which provides user online
-                        food shopping experience with various varieties.
+                        <strong>Description:</strong> This is my first static
+                        html page for the first lab assignment.
                         <hr />
                         <strong>Features:</strong>
                         <ul className="list-styles pt-1">
                           <li>
-                            Provide best quality of food in low price rate.
+                            Allows choose different headers, look for
+                            information, and submit contact form.
                           </li>
-                          <li>Powered by Pure JavaScript and CSS</li>
-                          <li>Respoisive Design</li>
+                          <li>Non-Responsive</li>
+                          <li>No data connection with the backend</li>
                         </ul>
                         <hr />
                         <strong>Tech used:</strong>
@@ -93,33 +92,22 @@ const ProjectTimeline = () => {
                             <span className="p-2">
                               <Image
                                 src={L_HTML5}
-                                alt="HTML 5"
+                                alt="L_HTML5"
                                 rounded
                                 className="image-style m-1"
                               ></Image>{" "}
-                              HTML5
+                              HTML
                             </span>
                           </li>
                           <li>
                             <span className="p-2">
                               <Image
                                 src={L_CSS3}
-                                alt="CSS 3"
+                                alt="L_CSS3 "
                                 rounded
                                 className="image-style m-1"
                               ></Image>{" "}
-                              CSS3
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_JAVASCRIPT}
-                                alt="JavaScript"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              JavaScript
+                              CSS
                             </span>
                           </li>
                         </ul>
@@ -130,13 +118,203 @@ const ProjectTimeline = () => {
               </div>
               <div className="d-flex justify-content-between flex-nowrap text-center">
                 <UrlButton
-                  href="https://adibaabid-team-malamjabba.github.io/ChatKharaMeal-Website/"
+                  href="https://github.com/zq170829/m1-assignment"
                   target="_blank"
                 >
                   SEE LIVE
                 </UrlButton>
                 <UrlButton
-                  href="https://github.com/AdibaAbid-Team-MalamJabba/ChatKharaMeal-Website"
+                  href="https://github.com/zq170829/m1-assignment"
+                  target="_blank"
+                >
+                  SOURCE CODE
+                </UrlButton>
+              </div>
+            </div>
+          </ImageEvent>
+          <ImageEvent
+            date="15th December, 2021"
+            className="text-center"
+            text="EVFY"
+            src={EVFY}
+            alt="EVFY"
+          >
+            <div className="d-flex justify-content-between flex-column mt-1">
+              <div>
+                <Accordion>
+                  <Card>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      eventKey="0"
+                      className="p-2 text-center accordian-main"
+                    >
+                      PROJECT DETAILS
+                    </Accordion.Toggle>
+
+                    <Accordion.Collapse eventKey="0" className="text-left">
+                      <Card.Body>
+                        <strong>Description:</strong> This is an group project
+                        from a real client. It has both the server side and the
+                        client side.
+                        <hr />
+                        <strong>Features:</strong>
+                        <ul className="list-styles pt-1">
+                          <li>Allows users register/login/edit account</li>
+                          <li>Responsive Design</li>
+                        </ul>
+                        <hr />
+                        <strong>Tech used:</strong>
+                        <ul>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_HTML5}
+                                alt="L_HTML5"
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              HTML
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_CSS3}
+                                alt="CSS "
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              CSS
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_JAVASCRIPT}
+                                alt="L_JAVASCRIPT"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              JAVA
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_MONGODB}
+                                alt="L_MONGODB"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              MongoDB
+                            </span>
+                          </li>
+                        </ul>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
+              </div>
+              <div className="d-flex justify-content-between flex-nowrap text-center">
+                <UrlButton
+                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
+                  target="_blank"
+                >
+                  SEE LIVE
+                </UrlButton>
+                <UrlButton
+                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
+                  target="_blank"
+                >
+                  SOURCE CODE
+                </UrlButton>
+              </div>
+            </div>
+          </ImageEvent>
+          {/* //Todolist */}
+          <ImageEvent
+            date="30th January, 2022"
+            className="text-center"
+            text="TotoList"
+            src={TotoList}
+            alt="TotoList"
+          >
+            <div className="d-flex justify-content-between flex-column mt-1">
+              <div>
+                <Accordion>
+                  <Card>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      eventKey="0"
+                      className="p-2 text-center accordian-main"
+                    >
+                      PROJECT DETAILS
+                    </Accordion.Toggle>
+
+                    <Accordion.Collapse eventKey="0" className="text-left">
+                      <Card.Body>
+                        <strong>Description:</strong> This is an Simple
+                        To-do-list App based on React framework.
+                        <hr />
+                        <strong>Features:</strong>
+                        <ul className="list-styles pt-1">
+                          <li>
+                            Allows users to add/delete/update do-to-list item
+                          </li>
+                          <li>Powered by React.js</li>
+                          <li>Respoisive Design</li>
+                        </ul>
+                        <hr />
+                        <strong>Tech used:</strong>
+                        <ul>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT}
+                                alt="L_REACT"
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              REACT
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_BOOTSTRAP}
+                                alt="L_BOOTSTRAP "
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              Bootstrap
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT_BOOTSTRAP}
+                                alt="REACT_BOOTSTRAP"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              React Bootstrap
+                            </span>
+                          </li>
+                        </ul>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
+              </div>
+              <div className="d-flex justify-content-between flex-nowrap text-center">
+                <UrlButton
+                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
+                  target="_blank"
+                >
+                  SEE LIVE
+                </UrlButton>
+                <UrlButton
+                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
                   target="_blank"
                 >
                   SOURCE CODE
@@ -146,313 +324,6 @@ const ProjectTimeline = () => {
           </ImageEvent>
 
           {/* //ExpenseTracker */}
-
-          <ImageEvent
-            date="18th July, 2020"
-            className="text-center"
-            text="Expense Tracker App"
-            src={ExpenseTracker}
-            alt="ExpenseTracker"
-          >
-            <div className="d-flex justify-content-between flex-column mt-1">
-              <div>
-                <Accordion>
-                  <Card>
-                    <Accordion.Toggle
-                      as={Card.Header}
-                      eventKey="0"
-                      className="p-2 text-center accordian-main"
-                    >
-                      PROJECT DETAILS
-                    </Accordion.Toggle>
-
-                    <Accordion.Collapse eventKey="0" className="text-left">
-                      <Card.Body>
-                        <strong>Description:</strong> This is a Finance app to
-                        track your daily expenses and keep to up to date. User
-                        friendly and easy to use.
-                        <hr />
-                        <strong>Features:</strong>
-                        <ul className="list-styles pt-1">
-                          <li>Keep up to date you about your daily expenses</li>
-                          <li>Powered by JavaScript, HTML and CSS.</li>
-                          <li>Firebase firestore hosting and integration</li>
-                        </ul>
-                        <hr />
-                        <strong>Tech used:</strong>
-                        <ul>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_HTML5}
-                                alt="HTML 5"
-                                rounded
-                                className="image-style m-1"
-                              ></Image>{" "}
-                              HTML5
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_CSS3}
-                                alt="CSS 3"
-                                rounded
-                                className="image-style m-1"
-                              ></Image>{" "}
-                              CSS3
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_JAVASCRIPT}
-                                alt="JavaScript"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              JavaScript
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_FIREBASE}
-                                alt="Firebase"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              Firebase
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_BOOTSTRAP}
-                                alt="bootstrap"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              Bootstrap
-                            </span>
-                          </li>
-                        </ul>
-                      </Card.Body>
-                    </Accordion.Collapse>
-                  </Card>
-                </Accordion>
-              </div>
-              <div className="d-flex justify-content-between flex-nowrap text-center">
-                <UrlButton
-                  href="https://expensetracker-1149f.web.app/"
-                  target="_blank"
-                >
-                  SEE LIVE
-                </UrlButton>
-                <UrlButton
-                  href="https://github.com/AdibaAbid/Expense-TrackerApp"
-                  target="_blank"
-                >
-                  SOURCE CODE
-                </UrlButton>
-              </div>
-            </div>
-          </ImageEvent>
-
-          {/* QuizApp */}
-
-          <ImageEvent
-            date="9th June, 2020"
-            className="text-center"
-            text="Quiz App"
-            src={QuizApp}
-            alt="Quizz App"
-          >
-            <div className="d-flex justify-content-between flex-column mt-1">
-              <div>
-                <Accordion>
-                  <Card>
-                    <Accordion.Toggle
-                      as={Card.Header}
-                      eventKey="0"
-                      className="p-2 text-center accordian-main"
-                    >
-                      PROJECT DETAILS
-                    </Accordion.Toggle>
-
-                    <Accordion.Collapse eventKey="0" className="text-left">
-                      <Card.Body>
-                        <strong>Description:</strong> Basic Quiz app, to test
-                        your computer knowledge. Also, The question and its
-                        options changed in every page reload.
-                        <hr />
-                        <strong>Features:</strong>
-                        <ul className="list-styles pt-1">
-                          <li>Test your basic computer knowledge </li>
-                          <li>API used for computer science quiz</li>
-                          <li>Powered by JavaScript, HTML and CSS.</li>
-                        </ul>
-                        <hr />
-                        <strong>Tech used:</strong>
-                        <ul>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_HTML5}
-                                alt="HTML 5"
-                                rounded
-                                className="image-style m-1"
-                              ></Image>{" "}
-                              HTML5
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_CSS3}
-                                alt="CSS 3"
-                                rounded
-                                className="image-style m-1"
-                              ></Image>{" "}
-                              CSS3
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_JAVASCRIPT}
-                                alt="JavaScript"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              JavaScript
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_BOOTSTRAP}
-                                alt="bootstrap"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              Bootstrap
-                            </span>
-                          </li>
-                        </ul>
-                      </Card.Body>
-                    </Accordion.Collapse>
-                  </Card>
-                </Accordion>
-              </div>
-              <div className="d-flex justify-content-between flex-nowrap text-center">
-                <UrlButton
-                  href="https://adibaabid.github.io/QuizzApp-JavaScript/"
-                  target="_blank"
-                >
-                  SEE LIVE
-                </UrlButton>
-                <UrlButton
-                  href="https://github.com/AdibaAbid/QuizzApp-JavaScript"
-                  target="_blank"
-                >
-                  SOURCE CODE
-                </UrlButton>
-              </div>
-            </div>
-          </ImageEvent>
-
-          {/* //MusicListApp */}
-
-          <ImageEvent
-            date="9th June, 2020"
-            className="text-center"
-            text="Music List App"
-            src={MusicList}
-            alt="MusicList App"
-          >
-            <div className="d-flex justify-content-between flex-column mt-1">
-              <div>
-                <Accordion>
-                  <Card>
-                    <Accordion.Toggle
-                      as={Card.Header}
-                      eventKey="0"
-                      className="p-2 text-center accordian-main"
-                    >
-                      PROJECT DETAILS
-                    </Accordion.Toggle>
-
-                    <Accordion.Collapse eventKey="0" className="text-left">
-                      <Card.Body>
-                        <strong>Description:</strong> If you are a Music Lover!,
-                        then its the best app for you to collect your music
-                        collection in one place.
-                        <hr />
-                        <strong>Features:</strong>
-                        <ul className="list-styles pt-1">
-                          <li> JavaScript CRUD operation</li>
-                          <li>Attractive UI, Easy to use.</li>
-                          <li>Powered by JavaScript, HTML and CSS.</li>
-                        </ul>
-                        <hr />
-                        <strong>Tech used:</strong>
-                        <ul>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_HTML5}
-                                alt="HTML 5"
-                                rounded
-                                className="image-style m-1"
-                              ></Image>{" "}
-                              HTML5
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_CSS3}
-                                alt="CSS 3"
-                                rounded
-                                className="image-style m-1"
-                              ></Image>{" "}
-                              CSS3
-                            </span>
-                          </li>
-                          <li>
-                            <span className="p-2">
-                              <Image
-                                src={L_JAVASCRIPT}
-                                alt="JavaScript"
-                                rounded
-                                className="image-style1 m-1"
-                              ></Image>{" "}
-                              JavaScript
-                            </span>
-                          </li>
-                        </ul>
-                      </Card.Body>
-                    </Accordion.Collapse>
-                  </Card>
-                </Accordion>
-              </div>
-              <div className="d-flex justify-content-between flex-nowrap text-center">
-                <UrlButton
-                  href="https://adibaabid.github.io/Music-List-App/"
-                  target="_blank"
-                >
-                  SEE LIVE
-                </UrlButton>
-                <UrlButton
-                  href="https://github.com/AdibaAbid/Music-List-Appt"
-                  target="_blank"
-                >
-                  SOURCE CODE
-                </UrlButton>
-              </div>
-            </div>
-          </ImageEvent>
         </Events>
       </Timeline>
     </div>
