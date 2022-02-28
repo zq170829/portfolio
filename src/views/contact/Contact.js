@@ -49,17 +49,6 @@ const Contact = () => {
                 </Button>
               </a>
             </div>
-            <div className="m-2">
-              <a
-                href="https://twitter.com/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline-info" title="Tweets are welcomed!">
-                  <i className="fab fa-twitter"></i> Twitter
-                </Button>
-              </a>
-            </div>
           </Col>
         </Row>
       </Jumbotron>

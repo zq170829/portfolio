@@ -18,7 +18,8 @@ import "./project.css";
 import PetAdopt from "../../assets/img/projects/PetAdopt.png";
 import EVFY from "../../assets/img/projects/EVFY.png";
 import TotoList from "../../assets/img/projects/Todolist.png";
-
+import ShopCart from "../../assets/img/projects/ShopCart.png";
+import ExpenseTracker from "../../assets/img/projects/ExpenseTracker.png";
 
 //Skills
 import L_HTML5 from "../../assets/img/skills/html-5.svg";
@@ -28,6 +29,7 @@ import L_REACT from "../../assets/img/skills/react.svg";
 import L_REACT_BOOTSTRAP from "../../assets/img/skills/react-bootstrap.svg";
 import L_JAVASCRIPT from "../../assets/img/skills/javascript.svg";
 import L_MONGODB from "../../assets/img/skills/mongodb.svg";
+import L_REDUX from "../../assets/img/skills/redux.svg";
 
 // Custom timline theme
 const customTheme = createTheme(themes.default, {
@@ -53,9 +55,9 @@ const ProjectTimeline = () => {
         <Events>
           {/* //Animal Adoption Website */}
           <ImageEvent
-            date="30th September, 2021"
+            date="September, 2021"
             className="text-center"
-            text="PetAdopt"
+            text="Pet Adoption"
             src={PetAdopt}
             alt="PetAdopt"
           >
@@ -132,8 +134,9 @@ const ProjectTimeline = () => {
               </div>
             </div>
           </ImageEvent>
+          {/* //EVFY Group Project */}
           <ImageEvent
-            date="15th December, 2021"
+            date="December, 2021"
             className="text-center"
             text="EVFY"
             src={EVFY}
@@ -217,13 +220,13 @@ const ProjectTimeline = () => {
               </div>
               <div className="d-flex justify-content-between flex-nowrap text-center">
                 <UrlButton
-                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
+                  href="http://greenteam-evfy.herokuapp.com/"
                   target="_blank"
                 >
                   SEE LIVE
                 </UrlButton>
                 <UrlButton
-                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
+                  href="https://github.com/zq170829/EVFY-Project2"
                   target="_blank"
                 >
                   SOURCE CODE
@@ -233,9 +236,9 @@ const ProjectTimeline = () => {
           </ImageEvent>
           {/* //Todolist */}
           <ImageEvent
-            date="30th January, 2022"
+            date="January, 2022"
             className="text-center"
-            text="TotoList"
+            text="To Do List"
             src={TotoList}
             alt="TotoList"
           >
@@ -322,8 +325,200 @@ const ProjectTimeline = () => {
               </div>
             </div>
           </ImageEvent>
+          {/* //Shop Cart */}
+          <ImageEvent
+            date="January, 2022"
+            className="text-center"
+            text="Shop Cart"
+            src={ShopCart}
+            alt="Shop Cart"
+          >
+            <div className="d-flex justify-content-between flex-column mt-1">
+              <div>
+                <Accordion>
+                  <Card>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      eventKey="0"
+                      className="p-2 text-center accordian-main"
+                    >
+                      PROJECT DETAILS
+                    </Accordion.Toggle>
 
+                    <Accordion.Collapse eventKey="0" className="text-left">
+                      <Card.Body>
+                        <strong>Description:</strong> This is an Simple Shop
+                        Cart App based on React framework.
+                        <hr />
+                        <strong>Features:</strong>
+                        <ul className="list-styles pt-1">
+                          <li>
+                            Allows users to add/delete/update item in the shop
+                            cart. The total amount of the selected items is
+                            automatically calculated.
+                          </li>
+                          <li>Powered by React.js</li>
+                          <li>Respoisive Design</li>
+                        </ul>
+                        <hr />
+                        <strong>Tech used:</strong>
+                        <ul>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT}
+                                alt="L_REACT"
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              REACT
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_BOOTSTRAP}
+                                alt="L_BOOTSTRAP "
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              Bootstrap
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT_BOOTSTRAP}
+                                alt="REACT_BOOTSTRAP"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              React Bootstrap
+                            </span>
+                          </li>
+                        </ul>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
+              </div>
+              <div className="d-flex justify-content-between flex-nowrap text-center">
+                <UrlButton
+                  href="https://codesandbox.io/s/todo-list-v5-rx2qt"
+                  target="_blank"
+                >
+                  SEE LIVE
+                </UrlButton>
+                <UrlButton
+                  href="https://github.com/zq170829/shopcart"
+                  target="_blank"
+                >
+                  SOURCE CODE
+                </UrlButton>
+              </div>
+            </div>
+          </ImageEvent>
           {/* //ExpenseTracker */}
+          <ImageEvent
+            date="Febuary, 2022"
+            className="text-center"
+            text="Expense Tracker"
+            src={ExpenseTracker}
+            alt="Expense Tracker"
+          >
+            <div className="d-flex justify-content-between flex-column mt-1">
+              <div>
+                <Accordion>
+                  <Card>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      eventKey="0"
+                      className="p-2 text-center accordian-main"
+                    >
+                      PROJECT DETAILS
+                    </Accordion.Toggle>
+
+                    <Accordion.Collapse eventKey="0" className="text-left">
+                      <Card.Body>
+                        <strong>Description:</strong> This is an Expense Tracker website based on React and Redux.
+                        <hr />
+                        <strong>Features:</strong>
+                        <ul className="list-styles pt-1">
+                          <li>
+                            Allows users to regiser account and login into the user dashboard. 
+                          </li>
+                          <li>Add/Delete/Update/Get expense</li>
+                          <li>Respoisive Design</li>
+                        </ul>
+                        <hr />
+                        <strong>Tech used:</strong>
+                        <ul>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT}
+                                alt="L_REACT"
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              REACT
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_BOOTSTRAP}
+                                alt="L_BOOTSTRAP "
+                                rounded
+                                className="image-style m-1"
+                              ></Image>{" "}
+                              Bootstrap
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT_BOOTSTRAP}
+                                alt="REACT_BOOTSTRAP"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              React Bootstrap
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REDUX}
+                                alt="REACT_BOOTSTRAP"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              Redux
+                            </span>
+                          </li>
+                        </ul>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
+              </div>
+              <div className="d-flex justify-content-between flex-nowrap text-center">
+                <UrlButton
+                  href=""
+                  target="_blank"
+                >
+                  SEE LIVE
+                </UrlButton>
+                <UrlButton
+                  href="https://github.com/zq170829/Expense-Tracker"
+                  target="_blank"
+                >
+                  SOURCE CODE
+                </UrlButton>
+              </div>
+            </div>
+          </ImageEvent>
         </Events>
       </Timeline>
     </div>
