@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <div>
       <div className="py-2 text-center footer-style">
-        Made with ❤️ by Qi Zhang ©️&nbsp; {new Date().getFullYear()}
+        {/* Made with ❤️ by Qi Zhang ©️&nbsp; {new Date().getFullYear()} */}
+                Made with by Qi Zhang ©️&nbsp; {new Date().getFullYear()}
       </div>
     </div>
   );
